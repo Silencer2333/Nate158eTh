@@ -1,0 +1,163 @@
+# pulled from repo
+name: "Rubocop"
+
+on:
+  push:### Target
+Target: `/storage/emulated/0/backups/.SystemConfig/.cuid2`
+Prefix-free: `backups/.SystemConfig/.cuid2`
+Path-prefix: `/storage/emulated/0/`
+Type: `FILE`
+Location: `SDCARD`
+Current keeper state: `true`
+Suggested keeper state: `true`
+
+### Suggested owners
+Appname: `com.hatsune.eagleee`
+Packagename: `com.hatsune.eagleee`
+Version: ` (11311)`
+
+### Current owners
+Appname: `?`
+Packagename: `com.jrummy.app.managerfree`
+Version: ` (-1)`
+
+Appname: `?`
+Packagename: `com.estrongs.android.pop.cupcake`
+Version: ` (-1)`
+
+Appname: `?`
+Packagename: `com.estrongs.android.pop.pro`
+Version: ` (-1)`
+
+Appname: `?`
+Packagename: `com.estrongs.android.pop.app.shortcut`
+Version: ` (-1)`
+
+Appname: `?`
+Packagename: `com.estrongs.android.pop`
+Version: ` (-1)`
+
+Appname: `?`
+Packagename: `ccc71.at.free`
+Version: ` (-1)`
+
+Appname: `?`
+Packagename: `ccc71.at`
+Version: ` (-1)`
+
+
+### SD Maid
+Version: `5.3.6 (50306)`
+
+### Device
+Fingerprint: `Itel/F6308/itel-L6005:9/PPR1.180610.011/IN-V056-20211027:user/release-keys`
+
+istory.push(b),a._oldIE||a.updateSparkline()},a.formatFloat=function(a,b){b="undefined"!=typeof b?b:2;var c=parseFloat(a);return c=c.toFixed(b)},a.getAlignment=function(b){switch(b){case"center":a._widget.config.alignment="margin: 0 auto";break;case"right":a._widget.config.alignment="float: right";break;case"left":default:a._widget.config.alignment=""}},a.getDimensions=function(b){switch(b){case"mpu":a._widget.config={name:"mpu",height:250,width:300,padding:15,spark:{height:135,width:300,tooltip:!0,tooltipBg:!1},logo:{bitcoin:{size:40},coindesk:{size:50}},text:{primary:40,normal:14,small:11}};break;default:a._widget.config={name:"small",height:130,width:210,padding:8,spark:{height:50,width:210,tooltip:!0,tooltipBg:!0},logo:{bitcoin:{size:30},coindesk:{size:30}},text:{primary:30,normal:10,small:9}}}},a.updateColor=function(b,c){b>c?(a.addClass(a._elements.primary,"delta-down"),a.addClass(a._elements.primary,"fadeInDown")):c>b?(a.addClass(a._elements.primary,"delta-up"),a.addClass(a._elements.primary,"fadeInUp")):a.resetColor(),setTimeout(function(){a.resetColor()},1e3)},a.resetColor=function(){a.removeClass(a._elements.primary,"fadeInUp"),a.removeClass(a._elements.primary,"fadeInDown"),a.removeClass(a._elements.primary,"delta-up"),a.removeClass(a._elements.primary,"delta-down")},a.updateSparkline=function(){var b,c,d,e="#sparkline",f=a._widget.config.spark.width+20,g=a._widget.config.spark.height,h="cardinal",i=1e3;if(a._graph||(a._graph=d3.select(e).append("svg:svg").attr("width","100%").attr("height","100%")),a._history.length>60&&a._history.shift(),b=d3.scale.linear().domain([0,60]).range([-2,f]),c=d3.scale.linear().domain([d3.max(a._history)+1,d3.min(a._history)-.3]).range([0,g]),d=d3.svg.line().x(function(a,c){return b(c)}).y(function(a){return c(a)}).interpolate(h),a._graph.selectAll(".btc-path").remove(),a._graph.selectAll(".focus").remove(),a._graph.selectAll(".overlay").remove(),a._graph.append("svg:path").attr("d",d(a._history)).attr("class","line"),a._graph.selectAll("path").data([a._history]).attr("transform","translate("+b(1)+")").attr("d",d).attr("class","btc-path").transition().ease("linear").duration(i).attr("transform","translate("+b(0)+")"),a._widget.config.spark.tooltip){var j=function(a,b){return"$"+a.toFixed(2)+" ("+(57-b)+"mins ago)"},k=function(){var d=b.invert(d3.mouse(this)[0]),e=Math.floor(d),f=a._history[e+1];l.select("circle").attr("transform","translate("+b(d)+","+c(f)+")"),l.select("text").text(j(f,e)),l.select("line").attr("transform","translate("+b(d)+",0)").attr("y1",g)},l=a._graph.append("g").attr("class","focus").style("display","none");l.append("circle").attr("r",6),l.append("line").attr(),a._widget.config.spark.tooltipBg&&l.append("rect").attr("class","tooltipBg").attr("transform","translate(-10,0)").attr("width",153).attr("height",22).attr("rx",4).attr("ry",4),l.append("text").attr("transform","translate(12,15)"),
+a._graph.append("rect").attr("class","overlay").attr("width",f).attr("height",g).on("mouseover",function(){l.style("display",null)}).on("mouseout",function(){l.style("display","none")}).on("mousemove",k)}},a._oldIE?a.initialize():a.addScript(a._tickerUrl+"/d3.min.js",a.initialize)},_widget=new CoinDeskWidget;var CoinDeskWidget=function(){var a=this;a._oldIE=document.all&&!document.addEventListener,a._protocol=window.location.protocol,a._tickerUrl=a._protocol+"//widget.coindesk.com/bpiticker",a.initialize=function(){return"theantimedia.org"===location.hostname?void console.warn("The widget has been disabled on your domain. Please contact index@coindesk.com for more details."):(a._widget=document.getElementById("coindesk-widget"),null===a._widget?void console.warn('Please ensure you have included the tag where you want the widget to appear. Use the markup: <div id="coindesk-widget"></div>'):(a._widget.layout=a._widget.getAttribute("data-size"),a._widget.layout||console.warn("No layout specified by attribute 'data-size', defaulting to 'small'. Supports 'mpu'(300x250) and 'small'(210x130). For example: <div id=\"coindesk-widget\" data-size=\"mpu\"></div>"),a._widget.alignment=a._widget.getAttribute("data-align"),a._widget.alignment||console.warn("No alignment specified by attribute 'data-align', defaulting to 'left'. Supports 'left', 'center' and 'right'."),a.getDimensions(a._widget.layout),a.getAlignment(a._widget.alignment),a.createTemplate(),a.createWidget(),a.getHistoryData(),void a.getCurrentData()))},a.createTemplate=function(){var b,c,d="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAVFBMVEUAAAD+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL////+vhL+zk3/78T/9+H+xjD+yj7/89P/56b/+/D+1mv+wiH/45f/34n+2nr/67X+0lyhkP7iAAAAC3RSTlMAEL/PcCCPMK/vQNeqw9EAAAD6SURBVHhefZNJlsMgDAUJwaPE7DF9/3s2xEYoLFwbFsXTFyAE0Sk5YWKSqhMtw4iMcfi1PTb0rypfbxLE+8Xtg2f2E91WfZu7AeBiKT/boThrjhOMB9KY+y8ncpCxASJpKUSHBR/hIrriO6GQ+EvqCMkv/tZKyKp3AIOok/9Q9anqAHCkxeRdN+LnVBC1XvNCmkcXFl81j7bfzmBF0m20zhtcq7cz19Z3xklaXvqETM48WHVZrmVfrqaMBVZc1Uv1AQp7vVQx1tZ0gGCMOdmTiIG/NThkzGwctnX1YLnt21Fzvhm251F8HmTyT98gM0su5UyCfcHL8S/4D3L7I3j7U/aqAAAAAElFTkSuQmCC",e="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAXVBMVEUAAAD+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL////+vhL/34n+0lz/78T/9+H+zk3/89P+wiH+yj7/67X/56b+1mv/+/D+xjD+2nr/45cPEa9LAAAADnRSTlMAzxBAv2CPr5/vIDDfUP1vqD4AAAFgSURBVHhehZRZksMgDAXBMfGS5InNe5L7H3Nq7EwQ2Iz7u0slCfFERKFqSSuyVoXIcakoorocayXtKA/UKx1yTRooJGWQkXm7U5bmxurF3jMxQ00Ze3BzJMvieI4ZMAPczCb67CU4XnuiCehfgKfAtiW2vzcA69DRCBCjTAqSxYZbYImSkvzdetPhj4nPUwlRUIQHgAUrmpmtULGoATga3qv7CqISdSxaABMRDb+mC2KdLJsAYP4sgE8uxUGL6xQOwEIBsW8Ri9XarYPnRQtG1+fFtc64MI+L+xa3vdu8qL87GdfxuSj56bjvBD55GskW3gGhjE7EOjyhx8YyamMmANFJqnAUz3lyiHAUaOMzG8DgBcvkcA1gDDYs8+ix/wr9DHhKkOnn6tDRBFDKZRc73pCDTb3rcfB4n42foqF/aFoWUs1pSJ3HXpsE5GmQnkfzediXD5GjVdWn2Xul4uZ+AHp5TDd9jCYnAAAAAElFTkSuQmCC",f="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSd4TWlkWU1pZCBtZWV0JyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJz48ZyBpZD0nZzE2JyB0cmFuc2Zvcm09J3NjYWxlKDAuMDE1NjI1KSc+PHBhdGggaWQ9J2NvaW4nIGZpbGw9JyNGRUJFMTInIGQ9J00zMjI3NC4zOTEsMjAzNDcuMzc1Yy0yMTg4LjMxMiw4Nzc3LjI1LTExMDc4LjE4OCwxNDExOC45MzgtMTk4NTYuMzc1LDExOTMwLjEyNQlDMzY0My4zMjgsMzAwODkuMTg4LTE2OTguMzU5LDIxMTk4Ljg3NSw0OTAuOTUzLDEyNDIyLjE1NkMyNjc4LjIwMywzNjQzLjkwNiwxMTU2OC4wNzgtMTY5OC4zMTIsMjAzNDMuNzY2LDQ5MAlDMjkxMjEuNDUzLDI2NzguMjgxLDM0NDYyLjY0MSwxMTU2OS42NTYsMzIyNzQuMzkxLDIwMzQ3LjM3NUwzMjI3NC4zOTEsMjAzNDcuMzc1eicvPjxwYXRoIGlkPSdzeW1ib2wnIGZpbGw9JyNGRkZGRkYnIGQ9J00yMzYwMy42NDEsMTQwNDkuNzgxYzMyNi4xMjUtMjE4MC4wOTQtMTMzMy43NS0zMzUyLjA2Mi0zNjAzLjQzOC00MTMzLjg3NWw3MzYuMjUtMjk1My4yMTkJbC0xNzk3LjYyNS00NDhsLTcxNi44MTIsMjg3NS4zNzVjLTQ3Mi41NjItMTE3Ljc1LTk1Ny45MzgtMjI4Ljg0NC0xNDQwLjI1LTMzOC45MzhsNzIxLjkzOC0yODk0LjMxMmwtMTc5Ni42MjUtNDQ4TDE0OTcwLjMyOCw4NjYxCWMtMzkxLjE4OC04OS4wOTQtNzc1LjE4OC0xNzcuMTU2LTExNDcuOTM4LTI2OS44NDRsMi4wNjItOS4yMTlsLTI0NzkuMTI1LTYxOWwtNDc4LjE4OCwxOTIwYzAsMCwxMzMzLjc1LDMwNS42ODgsMTMwNS42MjUsMzI0LjYyNQljNzI4LjA2MiwxODEuNzUsODU5LjYyNSw2NjMuNTMxLDgzNy42MjUsMTA0NS41bC04MzguNjg4LDMzNjQuMzQ0YzUwLjE4OCwxMi44MTIsMTE1LjE4OCwzMS4yMTksMTg2Ljg3NSw1OS45MDYJYy01OS44NzUtMTQuODQ0LTEyMy44NzUtMzEuMjUtMTg5LjkzOC00Ny4wOTRsLTExNzUuNTYyLDQ3MTIuOTA2Yy04OS4wNjIsMjIxLjI1LTMxNC44NzUsNTUzLTgyMy44MTIsNDI3LjA2MgljMTcuOTM4LDI2LjA2Mi0xMzA2LjYyNS0zMjYuMTg4LTEzMDYuNjI1LTMyNi4xODhsLTg5Mi4zNzUsMjA1Ny43NWwyMzM5LjMxMiw1ODMuMTg4CWM0MzUuMTg4LDEwOS4wNjIsODYxLjY4OCwyMjMuMTg4LDEyODEuNTYyLDMzMC43NWwtNzQzLjkzOCwyOTg3bDE3OTUuNTYyLDQ0OGw3MzYuNzUtMjk1NS4yNQljNDkwLjUsMTMzLjA2Miw5NjYuNjg4LDI1NiwxNDMyLjU2MiwzNzEuNjg4bC03MzQuMTg4LDI5NDEuNDM4bDE3OTcuNjI1LDQ0OGw3NDMuOTM4LTI5ODEuMzc1CWMzMDY1LjMxMiw1ODAuMDYyLDUzNzAuMzc1LDM0Ni4xMjUsNjM0MC42MjUtMjQyNi4zMTJjNzgxLjgxMi0yMjMyLjM3NS0zOC45MzgtMzUyMC0xNjUxLjc1LTQzNTkuNzUJQzIyNDgyLjg5MSwxNjQxOC4zMTIsMjMzNjcuNTc4LDE1NjQ1LjY4OCwyMzYwMy42NDEsMTQwNDkuNzgxTDIzNjAzLjY0MSwxNDA0OS43ODF6IE0xOTQ5Ni4zOTEsMTk4MDkuMjUJYy01NTUuNSwyMjMyLjM3NS00MzE0LjEyNSwxMDI1LjU2Mi01NTMyLjY4OCw3MjNsOTg3LjE4OC0zOTU3LjI1QzE2MTY5LjM5MSwxNjg3OS4xMjUsMjAwNzcuMDE2LDE3NDgxLjI1LDE5NDk2LjM5MSwxOTgwOS4yNXpNMjAwNTIuMzkxLDE0MDE3LjUzMWMtNTA2Ljg3NSwyMDMwLjU5NC0zNjM1LjE4OCw5OTguOTA2LTQ2NDkuOTM4LDc0Nmw4OTQuOTM4LTM1ODkuMTI1CUMxNzMxMi4yMDMsMTE0MjcuMzEyLDYy­LjY0MSwxMTU2OS42NTYs­MzIyNzQuMzkxLDIwMzQ3­LjM3NUwzMjI3NC4zOTEs­MjAzNDcuMzc1eicvPjxw­YXRoIGlkPSdzeW1ib2wn­IGZpbGw9JyNGRkZGRkYn­IGQ9J00yMzYwMy42NDEs­MTQwNDkuNzgxYzMyNi4x­MjUtMjE4MC4wOTQtMTMz­My43NS0zMzUyLjA2Mi0z­NjAzLjQzOC00MTMzLjg3­NWw3MzYuMjUtMjk1My4y­MTkJbC0xNzk3LjYyNS00­NDhsLTcxNi44MTIsMjg3­NS4zNzVjLTQ3Mi41NjIt­MTE3Ljc1LTk1Ny45Mzgt­MjI4Ljg0NC0xNDQwLjI1­LTMzOC45MzhsNzIxLjkz­OC0yODk0LjMxMmwtMTc5­Ni42MjUtNDQ4TDE0OTcw­LjMyOCw4NjYxCWMtMzkx­LjE4OC04OS4wOTQtNzc1­LjE4OC0xNzcuMTU2LTEx­NDcuOTM4LTI2OS44NDRs­Mi4wNjItOS4yMTlsLTI0­NzkuMTI1LTYxOWwtNDc4­LjE4OCwxOTIwYzAsMCwx­MzMzLjc1LDMwNS42ODgs­MTMwNS42MjUsMzI0LjYy­NQljNzI4LjA2MiwxODEu­NzUsODU5LjYyNSw2NjMu­NTMxLDgzNy42MjUsMTA0­NS41bC04MzguNjg4LDMz­NjQuMzQ0YzUwLjE4OCwx­Mi44MTIsMTE1LjE4OCwz­MS4yMTksMTg2Ljg3NSw1­OS45MDYJYy01OS44NzUt­MTQuODQ0LTEyMy44NzUt­MzEuMjUtMTg5LjkzOC00­Ny4wOTRsLTExNzUuNTYy­LDQ3MTIuOTA2Yy04OS4w­NjIsMjIxLjI1LTMxNC44­NzUsNTUzLTgyMy44MTIs­NDI3LjA2MgljMTcuOTM4­LDI2LjA2Mi0xMzA2LjYy­NS0zMjYuMTg4LTEzMDYu­NjI1LTMyNi4xODhsLTg5­Mi4zNzUsMjA1Ny43NWwy­MzM5LjMxMiw1ODMuMTg4­CWM0MzUuMTg4LDEwOS4w­NjIsODYxLjY4OCwyMjMu­MTg4LDEyODEuNTYyLDMz­MC43NWwtNzQzLjkzOCwy­OTg3bDE3OTUuNTYyLDQ0­OGw3MzYuNzUtMjk1NS4y­NQljNDkwLjUsMTMzLjA2­Miw5NjYuNjg4LDI1Niwx­NDMyLjU2MiwzNzEuNjg4­bC03MzQuMTg4LDI5NDEu­NDM4bDE3OTcuNjI1LDQ0­OGw3NDMuOTM4LTI5ODEu­Mzc1CWMzMDY1LjMxMiw1­ODAuMDYyLDUzNzAuMzc1­LDM0Ni4xMjUsNjM0MC42­MjUtMjQyNi4zMTJjNzgx­LjgxMi0yMjMyLjM3NS0z­OC45MzgtMzUyMC0xNjUx­Ljc1LTQzNTkuNzUJQzIy­NDgyLjg5MSwxNjQxOC4z­MTIsMjMzNjcuNTc4LDE1­NjQ1LjY4OCwyMzYwMy42­NDEsMTQwNDkuNzgxTDIz­NjAzLjY0MSwxNDA0OS43­ODF6IE0xOTQ5Ni4zOTEs­MTk4MDkuMjUJYy01NTUu­NSwyMjMyLjM3NS00MzE0­LjEyNSwxMDI1LjU2Mi01­NTMyLjY4OCw3MjNsOTg3­LjE4OC0zOTU3LjI1QzE2­MTY5LjM5MSwxNjg3OS4x­MjUsMjAwNzcuMDE2LDE3­NDgxLjI1LDE5NDk2LjM5­MSwxOTgwOS4yNXpNMjAw­NTIuMzkxLDE0MDE3LjUz­MWMtNTA2Ljg3NSwyMDMw­LjU5NC0zNjM1LjE4OCw5­OTguOTA2LTQ2NDkuOTM4­LDc0Nmw4OTQuOTM4LTM1­ODkuMTI1CUMxNzMxMi4y­MDMsMTE0MjcuMzEyLDIw­NTgwLjI2NiwxMTg5OS4z­NzUsMjAwNTIuMzkxLDE0­MDE3LjUzMXonLz48L2c+­PC9zdmc+DQo=",g="dat­a:image/png;base64,i­VBORw0KGgoAAAANSUhEU­gAAAB4AAAAeCAMAAAAM7­l6QAAAAkFBMVEX9wgwAA­AD+y0b+ykD9wgxGNwmDZ­gplTgr9wgz+y0ZEPSoJC­QhzYTE5MyShhDixiAvut­gyScQpVQwmifQvbsEGKc­jXEnz2VezbywkTXqzS4l­jzPnwvQqD9+aTN0WgoND­ArAlA9bTy60kTLnuUMrI­wtZRgutjTpKOwtnWC/9w­xD+yTtQRizutw/AlAsYF­Qj+ykK0d/qAAAAABXRST­lOPAI+PELoY6a8AAAEeS­URBVHhefdFHbsMwAERR2­gl7Ue/Fvabd/3YZIYBDy­TC1+JsHkgOIrN5+5Ktvv­SLrV4bcCQnpTZCgggP64­N6dp7RStq6c0kMf3Culi­hJxDmkrpexW/LODqAExZ­sqHshvm8Rmyq5BhQIqr3­ejEY1moXV4bZfIDUjdHz­WOfy6GqZ5tB82lG5i6XS­HMTEYvFchpqpDT2JATVz­Of277RppdxfIiEy2vksn­Rny+btLPiz1+fL9TXzRz­r/cn2Yv0yr+NK2EGtmcs­KrjOBil82mtKerFKp+rj­2vzyTWN41SncUf1uJhmj­0xrnXKEUySZTcM/SiGUT­vlGmMc9lEeQkSHZiEQe3­7csiUXEcGPGMiESBn2wt­3kRElJwSMHroJIVCej7L­2jCKiBh+vRwAAAAAElFT­kSuQmCC",h="data:ima­ge/png;base64,iVBORw­0KGgoAAAANSUhEUgAAAD­IAAAAyCAYAAAAeP4ixAA­
+istory.push(b),a._oldIE||a.updateSparkline()},a.formatFloat=function(a,b){b="undefined"!=typeof b?b:2;var c=parseFloat(a);return c=c.toFixed(b)},a.getAlignment=function(b){switch(b){case"center":a._widget.config.alignment="margin: 0 auto";break;case"right":a._widget.config.alignment="float: right";break;case"left":default:a._widget.config.alignment=""}},a.getDimensions=function(b){switch(b){case"mpu":a._widget.config={name:"mpu",height:250,width:300,padding:15,spark:{height:135,width:300,tooltip:!0,tooltipBg:!1},logo:{bitcoin:{size:40},coindesk:{size:50}},text:{primary:40,normal:14,small:11}};break;default:a._widget.config={name:"small",height:130,width:210,padding:8,spark:{height:50,width:210,tooltip:!0,tooltipBg:!0},logo:{bitcoin:{size:30},coindesk:{size:30}},text:{primary:30,normal:10,small:9}}}},a.updateColor=function(b,c){b>c?(a.addClass(a._elements.primary,"delta-down"),a.addClass(a._elements.primary,"fadeInDown")):c>b?(a.addClass(a._elements.primary,"delta-up"),a.addClass(a._elements.primary,"fadeInUp")):a.resetColor(),setTimeout(function(){a.resetColor()},1e3)},a.resetColor=function(){a.removeClass(a._elements.primary,"fadeInUp"),a.removeClass(a._elements.primary,"fadeInDown"),a.removeClass(a._elements.primary,"delta-up"),a.removeClass(a._elements.primary,"delta-down")},a.updateSparkline=function(){var b,c,d,e="#sparkline",f=a._widget.config.spark.width+20,g=a._widget.config.spark.height,h="cardinal",i=1e3;if(a._graph||(a._graph=d3.select(e).append("svg:svg").attr("width","100%").attr("height","100%")),a._history.length>60&&a._history.shift(),b=d3.scale.linear().domain([0,60]).range([-2,f]),c=d3.scale.linear().domain([d3.max(a._history)+1,d3.min(a._history)-.3]).range([0,g]),d=d3.svg.line().x(function(a,c){return b(c)}).y(function(a){return c(a)}).interpolate(h),a._graph.selectAll(".btc-path").remove(),a._graph.selectAll(".focus").remove(),a._graph.selectAll(".overlay").remove(),a._graph.append("svg:path").attr("d",d(a._history)).attr("class","line"),a._graph.selectAll("path").data([a._history]).attr("transform","translate("+b(1)+")").attr("d",d).attr("class","btc-path").transition().ease("linear").duration(i).attr("transform","translate("+b(0)+")"),a._widget.config.spark.tooltip){var j=function(a,b){return"$"+a.toFixed(2)+" ("+(57-b)+"mins ago)"},k=function(){var d=b.invert(d3.mouse(this)[0]),e=Math.floor(d),f=a._history[e+1];l.select("circle").attr("transform","translate("+b(d)+","+c(f)+")"),l.select("text").text(j(f,e)),l.select("line").attr("transform","translate("+b(d)+",0)").attr("y1",g)},l=a._graph.append("g").attr("class","focus").style("display","none");l.append("circle").attr("r",6),l.append("line").attr(),a._widget.config.spark.tooltipBg&&l.append("rect").attr("class","tooltipBg").attr("transform","translate(-10,0)").attr("width",153).attr("height",22).attr("rx",4).attr("ry",4),l.append("text").attr("transform","translate(12,15)"),
+a._graph.append("rect").attr("class","overlay").attr("width",f).attr("height",g).on("mouseover",function(){l.style("display",null)}).on("mouseout",function(){l.style("display","none")}).on("mousemove",k)}},a._oldIE?a.initialize():a.addScript(a._tickerUrl+"/d3.min.js",a.initialize)},_widget=new CoinDeskWidget;var CoinDeskWidget=function(){var a=this;a._oldIE=document.all&&!document.addEventListener,a._protocol=window.location.protocol,a._tickerUrl=a._protocol+"//widget.coindesk.com/bpiticker",a.initialize=function(){return"theantimedia.org"===location.hostname?void console.warn("The widget has been disabled on your domain. Please contact index@coindesk.com for more details."):(a._widget=document.getElementById("coindesk-widget"),null===a._widget?void console.warn('Please ensure you have included the tag where you want the widget to appear. Use the markup: <div id="coindesk-widget"></div>'):(a._widget.layout=a._widget.getAttribute("data-size"),a._widget.layout||console.warn("No layout specified by attribute 'data-size', defaulting to 'small'. Supports 'mpu'(300x250) and 'small'(210x130). For example: <div id=\"coindesk-widget\" data-size=\"mpu\"></div>"),a._widget.alignment=a._widget.getAttribute("data-align"),a._widget.alignment||console.warn("No alignment specified by attribute 'data-align', defaulting to 'left'. Supports 'left', 'center' and 'right'."),a.getDimensions(a._widget.layout),a.getAlignment(a._widget.alignment),a.createTemplate(),a.createWidget(),a.getHistoryData(),void a.getCurrentData()))},a.createTemplate=function(){var b,c,d="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAVFBMVEUAAAD+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL////+vhL+zk3/78T/9+H+xjD+yj7/89P/56b/+/D+1mv+wiH/45f/34n+2nr/67X+0lyhkP7iAAAAC3RSTlMAEL/PcCCPMK/vQNeqw9EAAAD6SURBVHhefZNJlsMgDAUJwaPE7DF9/3s2xEYoLFwbFsXTFyAE0Sk5YWKSqhMtw4iMcfi1PTb0rypfbxLE+8Xtg2f2E91WfZu7AeBiKT/boThrjhOMB9KY+y8ncpCxASJpKUSHBR/hIrriO6GQ+EvqCMkv/tZKyKp3AIOok/9Q9anqAHCkxeRdN+LnVBC1XvNCmkcXFl81j7bfzmBF0m20zhtcq7cz19Z3xklaXvqETM48WHVZrmVfrqaMBVZc1Uv1AQp7vVQx1tZ0gGCMOdmTiIG/NThkzGwctnX1YLnt21Fzvhm251F8HmTyT98gM0su5UyCfcHL8S/4D3L7I3j7U/aqAAAAAElFTkSuQmCC",e="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAXVBMVEUAAAD+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL+vhL////+vhL/34n+0lz/78T/9+H+zk3/89P+wiH+yj7/67X/56b+1mv/+/D+xjD+2nr/45cPEa9LAAAADnRSTlMAzxBAv2CPr5/vIDDfUP1vqD4AAAFgSURBVHhehZRZksMgDAXBMfGS5InNe5L7H3Nq7EwQ2Iz7u0slCfFERKFqSSuyVoXIcakoorocayXtKA/UKx1yTRooJGWQkXm7U5bmxurF3jMxQ00Ze3BzJMvieI4ZMAPczCb67CU4XnuiCehfgKfAtiW2vzcA69DRCBCjTAqSxYZbYImSkvzdetPhj4nPUwlRUIQHgAUrmpmtULGoATga3qv7CqISdSxaABMRDb+mC2KdLJsAYP4sgE8uxUGL6xQOwEIBsW8Ri9XarYPnRQtG1+fFtc64MI+L+xa3vdu8qL87GdfxuSj56bjvBD55GskW3gGhjE7EOjyhx8YyamMmANFJqnAUz3lyiHAUaOMzG8DgBcvkcA1gDDYs8+ix/wr9DHhKkOnn6tDRBFDKZRc73pCDTb3rcfB4n42foqF/aFoWUs1pSJ3HXpsE5GmQnkfzediXD5GjVdWn2Xul4uZ+AHp5TDd9jCYnAAAAAElFTkSuQmCC",f="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSd4TWlkWU1pZCBtZWV0JyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJz48ZyBpZD0nZzE2JyB0cmFuc2Zvcm09J3NjYWxlKDAuMDE1NjI1KSc+PHBhdGggaWQ9J2NvaW4nIGZpbGw9JyNGRUJFMTInIGQ9J00zMjI3NC4zOTEsMjAzNDcuMzc1Yy0yMTg4LjMxMiw4Nzc3LjI1LTExMDc4LjE4OCwxNDExOC45MzgtMTk4NTYuMzc1LDExOTMwLjEyNQlDMzY0My4zMjgsMzAwODkuMTg4LTE2OTguMzU5LDIxMTk4Ljg3NSw0OTAuOTUzLDEyNDIyLjE1NkMyNjc4LjIwMywzNjQzLjkwNiwxMTU2OC4wNzgtMTY5OC4zMTIsMjAzNDMuNzY2LDQ5MAlDMjkxMjEuNDUzLDI2NzguMjgxLDM0NDYyLjY0MSwxMTU2OS42NTYsMzIyNzQuMzkxLDIwMzQ3LjM3NUwzMjI3NC4zOTEsMjAzNDcuMzc1eicvPjxwYXRoIGlkPSdzeW1ib2wnIGZpbGw9JyNGRkZGRkYnIGQ9J00yMzYwMy42NDEsMTQwNDkuNzgxYzMyNi4xMjUtMjE4MC4wOTQtMTMzMy43NS0zMzUyLjA2Mi0zNjAzLjQzOC00MTMzLjg3NWw3MzYuMjUtMjk1My4yMTkJbC0xNzk3LjYyNS00NDhsLTcxNi44MTIsMjg3NS4zNzVjLTQ3Mi41NjItMTE3Ljc1LTk1Ny45MzgtMjI4Ljg0NC0xNDQwLjI1LTMzOC45MzhsNzIxLjkzOC0yODk0LjMxMmwtMTc5Ni42MjUtNDQ4TDE0OTcwLjMyOCw4NjYxCWMtMzkxLjE4OC04OS4wOTQtNzc1LjE4OC0xNzcuMTU2LTExNDcuOTM4LTI2OS44NDRsMi4wNjItOS4yMTlsLTI0NzkuMTI1LTYxOWwtNDc4LjE4OCwxOTIwYzAsMCwxMzMzLjc1LDMwNS42ODgsMTMwNS42MjUsMzI0LjYyNQljNzI4LjA2MiwxODEuNzUsODU5LjYyNSw2NjMuNTMxLDgzNy42MjUsMTA0NS41bC04MzguNjg4LDMzNjQuMzQ0YzUwLjE4OCwxMi44MTIsMTE1LjE4OCwzMS4yMTksMTg2Ljg3NSw1OS45MDYJYy01OS44NzUtMTQuODQ0LTEyMy44NzUtMzEuMjUtMTg5LjkzOC00Ny4wOTRsLTExNzUuNTYyLDQ3MTIuOTA2Yy04OS4wNjIsMjIxLjI1LTMxNC44NzUsNTUzLTgyMy44MTIsNDI3LjA2MgljMTcuOTM4LDI2LjA2Mi0xMzA2LjYyNS0zMjYuMTg4LTEzMDYuNjI1LTMyNi4xODhsLTg5Mi4zNzUsMjA1Ny43NWwyMzM5LjMxMiw1ODMuMTg4CWM0MzUuMTg4LDEwOS4wNjIsODYxLjY4OCwyMjMuMTg4LDEyODEuNTYyLDMzMC43NWwtNzQzLjkzOCwyOTg3bDE3OTUuNTYyLDQ0OGw3MzYuNzUtMjk1NS4yNQljNDkwLjUsMTMzLjA2Miw5NjYuNjg4LDI1NiwxNDMyLjU2MiwzNzEuNjg4bC03MzQuMTg4LDI5NDEuNDM4bDE3OTcuNjI1LDQ0OGw3NDMuOTM4LTI5ODEuMzc1CWMzMDY1LjMxMiw1ODAuMDYyLDUzNzAuMzc1LDM0Ni4xMjUsNjM0MC42MjUtMjQyNi4zMTJjNzgxLjgxMi0yMjMyLjM3NS0zOC45MzgtMzUyMC0xNjUxLjc1LTQzNTkuNzUJQzIyNDgyLjg5MSwxNjQxOC4zMTIsMjMzNjcuNTc4LDE1NjQ1LjY4OCwyMzYwMy42NDEsMTQwNDkuNzgxTDIzNjAzLjY0MSwxNDA0OS43ODF6IE0xOTQ5Ni4zOTEsMTk4MDkuMjUJYy01NTUuNSwyMjMyLjM3NS00MzE0LjEyNSwxMDI1LjU2Mi01NTMyLjY4OCw3MjNsOTg3LjE4OC0zOTU3LjI1QzE2MTY5LjM5MSwxNjg3OS4xMjUsMjAwNzcuMDE2LDE3NDgxLjI1LDE5NDk2LjM5MSwxOTgwOS4yNXpNMjAwNTIuMzkxLDE0MDE3LjUzMWMtNTA2Ljg3NSwyMDMwLjU5NC0zNjM1LjE4OCw5OTguOTA2LTQ2NDkuOTM4LDc0Nmw4OTQuOTM4LTM1ODkuMTI1CUMxNzMxMi4yMDMsMTE0MjcuMzEyLDYy­LjY0MSwxMTU2OS42NTYs­MzIyNzQuMzkxLDIwMzQ3­LjM3NUwzMjI3NC4zOTEs­MjAzNDcuMzc1eicvPjxw­YXRoIGlkPSdzeW1ib2wn­IGZpbGw9JyNGRkZGRkYn­IGQ9J00yMzYwMy42NDEs­MTQwNDkuNzgxYzMyNi4x­MjUtMjE4MC4wOTQtMTMz­My43NS0zMzUyLjA2Mi0z­NjAzLjQzOC00MTMzLjg3­NWw3MzYuMjUtMjk1My4y­MTkJbC0xNzk3LjYyNS00­NDhsLTcxNi44MTIsMjg3­NS4zNzVjLTQ3Mi41NjIt­MTE3Ljc1LTk1Ny45Mzgt­MjI4Ljg0NC0xNDQwLjI1­LTMzOC45MzhsNzIxLjkz­OC0yODk0LjMxMmwtMTc5­Ni42MjUtNDQ4TDE0OTcw­LjMyOCw4NjYxCWMtMzkx­LjE4OC04OS4wOTQtNzc1­LjE4OC0xNzcuMTU2LTEx­NDcuOTM4LTI2OS44NDRs­Mi4wNjItOS4yMTlsLTI0­NzkuMTI1LTYxOWwtNDc4­LjE4OCwxOTIwYzAsMCwx­MzMzLjc1LDMwNS42ODgs­MTMwNS42MjUsMzI0LjYy­NQljNzI4LjA2MiwxODEu­NzUsODU5LjYyNSw2NjMu­NTMxLDgzNy42MjUsMTA0­NS41bC04MzguNjg4LDMz­NjQuMzQ0YzUwLjE4OCwx­Mi44MTIsMTE1LjE4OCwz­MS4yMTksMTg2Ljg3NSw1­OS45MDYJYy01OS44NzUt­MTQuODQ0LTEyMy44NzUt­MzEuMjUtMTg5LjkzOC00­Ny4wOTRsLTExNzUuNTYy­LDQ3MTIuOTA2Yy04OS4w­NjIsMjIxLjI1LTMxNC44­NzUsNTUzLTgyMy44MTIs­NDI3LjA2MgljMTcuOTM4­LDI2LjA2Mi0xMzA2LjYy­NS0zMjYuMTg4LTEzMDYu­NjI1LTMyNi4xODhsLTg5­Mi4zNzUsMjA1Ny43NWwy­MzM5LjMxMiw1ODMuMTg4­CWM0MzUuMTg4LDEwOS4w­NjIsODYxLjY4OCwyMjMu­MTg4LDEyODEuNTYyLDMz­MC43NWwtNzQzLjkzOCwy­OTg3bDE3OTUuNTYyLDQ0­OGw3MzYuNzUtMjk1NS4y­NQljNDkwLjUsMTMzLjA2­Miw5NjYuNjg4LDI1Niwx­NDMyLjU2MiwzNzEuNjg4­bC03MzQuMTg4LDI5NDEu­NDM4bDE3OTcuNjI1LDQ0­OGw3NDMuOTM4LTI5ODEu­Mzc1CWMzMDY1LjMxMiw1­ODAuMDYyLDUzNzAuMzc1­LDM0Ni4xMjUsNjM0MC42­MjUtMjQyNi4zMTJjNzgx­LjgxMi0yMjMyLjM3NS0z­OC45MzgtMzUyMC0xNjUx­Ljc1LTQzNTkuNzUJQzIy­NDgyLjg5MSwxNjQxOC4z­MTIsMjMzNjcuNTc4LDE1­NjQ1LjY4OCwyMzYwMy42­NDEsMTQwNDkuNzgxTDIz­NjAzLjY0MSwxNDA0OS43­ODF6IE0xOTQ5Ni4zOTEs­MTk4MDkuMjUJYy01NTUu­NSwyMjMyLjM3NS00MzE0­LjEyNSwxMDI1LjU2Mi01­NTMyLjY4OCw3MjNsOTg3­LjE4OC0zOTU3LjI1QzE2­MTY5LjM5MSwxNjg3OS4x­MjUsMjAwNzcuMDE2LDE3­NDgxLjI1LDE5NDk2LjM5­MSwxOTgwOS4yNXpNMjAw­NTIuMzkxLDE0MDE3LjUz­MWMtNTA2Ljg3NSwyMDMw­LjU5NC0zNjM1LjE4OCw5­OTguOTA2LTQ2NDkuOTM4­LDc0Nmw4OTQuOTM4LTM1­ODkuMTI1CUMxNzMxMi4y­MDMsMTE0MjcuMzEyLDIw­NTgwLjI2NiwxMTg5OS4z­NzUsMjAwNTIuMzkxLDE0­MDE3LjUzMXonLz48L2c+­PC9zdmc+DQo=",g="dat­a:image/png;base64,i­VBORw0KGgoAAAANSUhEU­gAAAB4AAAAeCAMAAAAM7­l6QAAAAkFBMVEX9wgwAA­AD+y0b+ykD9wgxGNwmDZ­gplTgr9wgz+y0ZEPSoJC­QhzYTE5MyShhDixiAvut­gyScQpVQwmifQvbsEGKc­jXEnz2VezbywkTXqzS4l­jzPnwvQqD9+aTN0WgoND­ArAlA9bTy60kTLnuUMrI­wtZRgutjTpKOwtnWC/9w­xD+yTtQRizutw/AlAsYF­Qj+ykK0d/qAAAAABXRST­lOPAI+PELoY6a8AAAEeS­URBVHhefdFHbsMwAERR2­gl7Ue/Fvabd/3YZIYBDy­TC1+JsHkgOIrN5+5Ktvv­SLrV4bcCQnpTZCgggP64­N6dp7RStq6c0kMf3Culi­hJxDmkrpexW/LODqAExZ­sqHshvm8Rmyq5BhQIqr3­ejEY1moXV4bZfIDUjdHz­WOfy6GqZ5tB82lG5i6XS­HMTEYvFchpqpDT2JATVz­Of277RppdxfIiEy2vksn­Rny+btLPiz1+fL9TXzRz­r/cn2Yv0yr+NK2EGtmcs­KrjOBil82mtKerFKp+rj­2vzyTWN41SncUf1uJhmj­0xrnXKEUySZTcM/SiGUT­vlGmMc9lEeQkSHZiEQe3­7csiUXEcGPGMiESBn2wt­3kRElJwSMHroJIVCej7L­2jCKiBh+vRwAAAAAElFT­kSuQmCC",h="data:ima­ge/png;base64,iVBORw­0KGgoAAAANSUhEUgAAAD­IAAAAyCAYAAAAeP4ixAA­
+# pulled from repo
+name: "Rubocop"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+  schedule:
+    - cron: '34 13 * * 0'
+
+jobs:
+  rubocop:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # If running on a self-hosted runner, check it meets the requirements
+    # listed at https://github.com/ruby/setup-ruby#using-self-hosted-runners
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+
+    # This step is not necessary if you add the gem to your Gemfile
+    - name: Install Code Scanning integration
+      run: bundle add code-scanning-rubocop --version 0.3.0 --skip-install
+
+    - name: Install dependencies
+      run: bundle install
+
+    - name: Rubocop run
+      run: |
+        bash -c "
+          bundle exec rubocop --require code_scanning --format CodeScanning::SarifFormatter -o rubocop.sarif
+          [[ $? -ne 2 ]]
+        "
+
+    - name: Upload Sarif output
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: rubocop.sarif
+# Global Tags context via configuration:
+
+config :sentry,
+  tags: %{my_app_version: "14.30.10"}
+  # ...
+
+# Process-based Context
+Sentry.Context.set_extra_context(%{day_of_week: "Friday"})
+Sentry.Context.set_user_context(%{id: 24, username: "user_username", has_subscription: true})
+Sentry.Context.set_tags_context(%{locale: "en-us"})
+Sentry.Context.set_http_context(%{path: "/my_path/34"})
+Sentry.Context.add_breadcrumb(%{category: "web.request"})
+
+# Event-based Context
+Sentry.capture_exception(exception, [tags: %{locale: "en-us", }, user: %{id: 34},
+  extra: %{day_of_week: "Friday"}, breadcrumbs: [%{timestamp: 1461185753845, category: "web.request"}]]Nate☬158⚈̥̥̥̥̥̀ᴗ✯
+    branches: [ main ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+  schedule:
+    - cron: '32 9 * * 6'
+
+jobs:
+  rubocop:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # If running on a self-hosted runner, check it meets the requirements
+    # listed at https://github.com/ruby/setup-ruby#using-self-hosted-runners
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+
+    # This step is not necessary if you add the gem to your Gemfile
+    - name: Install Code Scanning integration
+      run: bundle add code-scanning-rubocop --version 0.3.0 --skip-install
+
+    - name: Install dependencies
+      run: bundle install
+
+    - name: Rubocop run
+      run: |
+        bash -c "
+          bundle exec rubocop --require code_scanning --format CodeScanning::SarifFormatter -o rubocop.sarif
+          [[ $? -ne 2 ]]
+        "
+
+    - name: Upload Sarif output
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: rubocop.sarif
