@@ -1,0 +1,930 @@
+### Hi there 👋
+
+<!--
+**Nate158eTh/Nate158eTh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+Here are some ideas to get you started:
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
+ 
+ ​Lesson04 : 类与对象 下 
+ ​1、求1+2+3+...+n https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&tqId=11200&tPage=3&rp=3&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking 
+ ​class Solution { 
+ ​public: 
+ ​    class Sum 
+ ​    { 
+ ​    public: 
+ ​        Sum() 
+ ​        { 
+ ​            _sum += _i; 
+ ​            _i++; 
+ ​        } 
+ ​    }; 
+ ​      
+ ​    int Sum_Solution(int n) { 
+ ​        _i = 1; 
+ ​        _sum = 0; 
+ ​        Sum array[n]; 
+ ​        return _sum; 
+ ​    } 
+ ​      
+ ​    static size_t _sum; 
+ ​    static size_t _i; 
+ ​}; 
+ ​  
+ ​size_t Solution::_sum = 0; 
+ ​size_t Solution::_i = 1; 
+  
+ ​2、计算日期到天数的转换 https://www.nowcoder.com/practice/769d45d455fe40b385ba32f97e7bcded?tpId=37&&tqId=21296&rp=1&ru=/activity/oj&qru=/ta/huawei/question-ranking 
+ ​#include<iostream> 
+ ​using namespace std; 
+ ​/* 
+ ​*思路： 
+ ​* 1. 通过枚举每个月的1号是这一年的第几天，从而进行累加求和即可，其中注意闰年的处理 
+ ​*/ 
+ ​int main() 
+ ​{ 
+ ​    int year, month, day; 
+ ​    while(cin>>year>>month>>day) 
+ ​    { 
+ ​        int monthDays[13] = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365}; 
+ ​        int nday = monthDays[month-1] + day; 
+ ​        if(month > 2 && 
+ ​           ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) 
+ ​        { 
+ ​            nday += 1; 
+ ​        } 
+ ​  
+ ​        cout<<nday<<endl; 
+ ​    } 
+ ​      
+ ​ return 0; 
+ ​} 
+  
+  
+ ​////////////////////////////////////////////////////////////////////////////////////////// 
+ ​#include<iostream> 
+ ​using namespace std; 
+  
+ ​bool IsLeap(int year) 
+ ​{ 
+ ​    return ((year%4==0&&year%100!=0) || (year%400==0)); 
+ ​} 
+ ​int GetDaysByYM(int year, int month) 
+ ​{ 
+ ​    int days[] = {29,31,28,31,30,31,30,31,31,30,31,30,31}; 
+ ​    if(month==2 && IsLeap(year)) 
+ ​        month = 0; 
+ ​    return days[month]; 
+ ​} 
+  
+ ​int GetDayByYMD(int year, int month, int day) 
+ ​{ 
+ ​    int sum = 0; 
+ ​    for(int i=1; i<month; ++i) 
+ ​        sum += GetDaysByYM(year, i); 
+ ​    sum += day; 
+ ​    return sum; 
+ ​} 
+  
+ ​int main() 
+ ​{ 
+ ​    int year, month, day, ret; 
+ ​    while(cin>>year>>month>>day) 
+ ​    { 
+ ​        ret = GetDayByYMD(year, month, day); 
+ ​        cout<<ret<<endl; 
+ ​    } 
+ ​    return 0; 
+ ​} 
+  
+  
+ ​3、日期差值 https://www.nowcoder.com/practice/ccb7383c76fc48d2bbc27a2a6319631c?tpId=62&&tqId=29468&rp=1&ru=/activity/oj&qru=/ta/sju-kaoyan/question-ranking 
+ ​#include <iostream> 
+ ​   using namespace std; 
+ ​   /* 
+ ​   *思路： 
+ ​   * 1. 分别求出每一个日期与0000年0月1日距离的天数 
+ ​   * 2. 两个距离天数相减即可得到两个日期相差的天数 
+ ​   */ 
+ ​   //平年从1月到n月的天数 
+ ​   int mon[12]={0,31,59,90,120,151,181,212,243,273,304,334}; 
+ ​   //给出年月日，计算距离0000年0月1日的天数和 
+ ​   
+ ​   int CountDay(int y,int m,int d) 
+ ​   { 
+ ​       // 计算0-y年的天数 
+ ​       int yearDay = y*365+y/4-y/100+y/400; 
+ ​       // 计算到0-m月的天数 
+ ​       int monthDay = mon[m-1]; 
+ ​        
+ ​       if(m > 2 && ((y%4 == 0 && y%100 != 0) || y%400==0)) 
+ ​           monthDay += 1; 
+ ​        
+ ​       return yearDay + monthDay + d; 
+ ​   } 
+ ​   
+ ​   int main() 
+ ​   { 
+ ​       int year1,month1,day1; 
+ ​       scanf("%4d%2d%2d",&year1,&month1,&day1); 
+ ​       int n1 = CountDay(year1,month1,day1); 
+ ​        
+ ​       int year2,month2,day2; 
+ ​    scanf("%4d%2d%2d",&year2,&month2,&day2); 
+ ​       int n2 = CountDay(year2,month2,day2); 
+ ​        
+ ​       cout<<abs(n1-n2)+1<<endl; 
+ ​   } 
+ ​   
+ ​4、打印日期 https://www.nowcoder.com/practice/b1f7a77416194fd3abd63737cdfcf82b?tpId=69&&tqId=29669&rp=1&ru=/activity/oj&qru=/ta/hust-kaoyan/question-ranking 
+ ​#include <iostream> 
+ ​   using namespace std; 
+ ​      
+ ​   int main() 
+ ​   { 
+ ​       int year; 
+ ​       int day; 
+ ​          
+ ​       int mon[13] = {31, 28, 31, 30, 31, 30, 31, 31, 30 ,31, 30, 31};     
+ ​       while(cin>>year>>day) 
+ ​       { 
+ ​           if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) 
+ ​               mon[1] = 29; 
+ ​           else 
+ ​               mon[1] = 28; 
+ ​                
+ ​           for(int i = 0; i < 12; i++) 
+ ​           { 
+ ​               if(day <= mon[i]) 
+ ​               { 
+ ​                   printf("%04d-%02d-%02d\n", year, i + 1, day); 
+ ​                   break; 
+ ​               } 
+ ​               else 
+ ​               { 
+ ​                day = day - mon[i]; 
+ ​               } 
+ ​        } 
+ ​       } 
+ ​       return 0; 
+ ​   } 
+  
+ ​//////////////////////////////////////////////////////////////////////////////////////// 
+ ​#include<iostream> 
+ ​using namespace std; 
+  
+ ​int main() 
+ ​{ 
+ ​    int year, day; 
+ ​    while(cin>>year>>day) 
+ ​    { 
+ ​        int mdays[] = {0,31,28,31,30,31,30,31,31,30,31,30,31}; 
+ ​        if((year%4==0&&year%100!=0) || (year%400==0)) 
+ ​            mdays[2] = 29; 
+ ​        else  
+ ​            mdays[2] = 28; 
+ ​        int month = 1; 
+ ​        while(day > mdays[month]) 
+ ​        { 
+ ​            day -= mdays[month]; 
+ ​            month++; 
+ ​        } 
+ ​        printf("%04d-%02d-%02d\n", year, month, day); 
+ ​    } 
+ ​    return 0; 
+ ​} 
+  
+ ​5、累加天数 https://www.nowcoder.com/practice/eebb2983b7bf40408a1360efb33f9e5d?tpId=40&&tqId=31013&rp=1&ru=/activity/oj&qru=/ta/kaoyan/question-ranking 
+ ​  #include<iostream> 
+ ​   using namespace std; 
+ ​     
+ ​   int main() 
+ ​   { 
+ ​       int n; 
+ ​       while(cin>>n) 
+ ​       { 
+ ​           for(int i=0;i<n;i++) 
+ ​           { 
+ ​              int y,m,d,num; 
+ ​              int days[12]={31,28,31,30,31,30,31,31,30,31,30,31}; 
+ ​              cin>>y>>m>>d>>num; 
+ ​               
+ ​              while(num>days[m-1]) 
+ ​              { 
+ ​                  if(y%400==0||(y%4==0&&y%100!=0)) 
+ ​                      days[1]=29; 
+ ​                  else 
+ ​                      days[1]=28; 
+ ​                  
+ ​                  num -= days[m-1]-d; 
+ ​                  d=0; 
+ ​                  m++; 
+ ​                  if(m==13) 
+ ​                  { 
+ ​                      y++; 
+ ​                      m=1; 
+ ​                  } 
+ ​           } 
+ ​               printf("%4d-%02d-%02d\n",y,m,num); 
+ ​           } 
+ ​       } 
+ ​       return 0; 
+ ​   } 
+  
+ ​////////////////////////////////////////////////////////////////////////////////////// 
+ ​#include<iostream> 
+ ​using namespace std; 
+  
+ ​bool IsLeap(int year) 
+ ​{ 
+ ​    return ((year%4==0&&year%100!=0) || (year%400==0)); 
+ ​} 
+ ​int GetDaysByYM(int year, int month) 
+ ​{ 
+ ​    int days[] = {29,31,28,31,30,31,30,31,31,30,31,30,31}; 
+ ​    if(month==2 && IsLeap(year)) 
+ ​        month = 0; 
+ ​    return days[month]; 
+ ​} 
+  
+ ​void GetNextDate(int year, int month, int day, int n) 
+ ​{ 
+ ​    int mdays = GetDaysByYM(year, month); 
+ ​    while(day + n > mdays) 
+ ​    { 
+ ​        month++; 
+ ​        if(month > 12) 
+ ​        { 
+ ​            year++; 
+ ​            month = 1; 
+ ​        } 
+ ​        n -= mdays; 
+ ​        mdays = GetDaysByYM(year, month); 
+ ​    } 
+ ​    printf("%04d-%02d-%02d\n", year, month, day+n); 
+ ​} 
+  
+ ​int main() 
+ ​{ 
+ ​    int m; 
+ ​    while(cin >> m) 
+ ​    { 
+ ​        for(int i=0; i<m; ++i) 
+ ​        { 
+ ​            int year, month, day, n; 
+ ​            cin>>year>>month>>day>>n; 
+ ​            GetNextDate(year, month, day, n); 
+ ​        } 
+ ​    } 
+ ​    return 0; 
+ ​} 
+  
+  
+ ​Lesson8 String 
+ ​1、字符串转整形数字 https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&rp=6&ru=%2Factivity%2Foj&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking&tab=answerKey 
+ ​class Solution { 
+ ​public: 
+ ​     
+ ​    int StrToInt(string str)  
+ ​    { 
+ ​        if(str.size() == 0) 
+ ​            return 0; 
+ ​         
+ ​        int i = 0; 
+ ​         
+ ​        int flag = 1; 
+ ​        if(str[0] == '+') 
+ ​        { 
+ ​            flag = 1; 
+ ​            i++; 
+ ​        } 
+ ​        else if(str[0] == '-') 
+ ​        { 
+ ​            flag = -1; 
+ ​            i++; 
+ ​        } 
+ ​         
+ ​        unsigned long num = 0; 
+ ​         
+ ​        while(i < str.size()) 
+ ​        { 
+ ​            if(str[i]<'0' || str[i]>'9') 
+ ​                return 0; 
+ ​            num = num * 10 + str[i]-'0'; 
+ ​            i++; 
+ ​        } 
+ ​        return flag*num; 
+ ​    } 
+ ​}; 
+  
+ ​2、字符串相加 https://leetcode-cn.com/problems/add-strings/ 
+ ​class Solution { 
+ ​public: 
+  
+ ​    int AddItem(int a, int b, int &sign) 
+ ​    { 
+ ​        int sum = a + b + sign; 
+ ​        if(sum >= 10) 
+ ​        { 
+ ​            sum -= 10; 
+ ​            sign = 1; 
+ ​        } 
+ ​        else 
+ ​            sign = 0; 
+ ​        return sum; 
+ ​    } 
+ ​                      //1234         //3456 
+ ​    string addStrings(string num1, string num2)  
+ ​    { 
+ ​        reverse(num1.begin(), num1.end()); //456 
+ ​        reverse(num2.begin(), num2.end()); // 77 
+  
+ ​        string result; 
+ ​        size_t i, j; 
+ ​        i = j = 0; 
+ ​        int sum, sign = 0; 
+ ​        while(i<num1.size() && j<num2.size()) 
+ ​        { 
+ ​            sum = AddItem(num1[i]-'0', num2[j]-'0', sign); 
+ ​            result += (sum+'0'); 
+ ​            i++; 
+ ​            j++; 
+ ​        } 
+  
+ ​        while(i < num1.size()) 
+ ​        { 
+ ​            sum = AddItem(num1[i]-'0', 0, sign); 
+ ​            result += (sum+'0'); 
+ ​            i++; 
+ ​        } 
+  
+ ​        while(j < num2.size()) 
+ ​        { 
+ ​            sum = AddItem(0, num2[j]-'0', sign);             
+ ​            result += (sum+'0'); 
+ ​            j++; 
+ ​        } 
+ ​        if(sign > 0) 
+ ​            result += (sign+'0'); 
+ ​        reverse(result.begin(), result.end()); 
+ ​        return result; 
+ ​    } 
+ ​}; 
+  
+ ​3、仅仅反转字母 https://leetcode-cn.com/problems/reverse-only-letters/submissions/ 
+ ​class Solution { 
+ ​public: 
+  
+ ​    bool isLetter(char ch) 
+ ​    { 
+ ​        if((ch>='a' && ch<='z') || (ch>='A'&&ch<='Z')) 
+ ​            return true; 
+ ​        return false; 
+ ​    } 
+ ​    string reverseOnlyLetters(string S)  
+ ​    { 
+ ​        if(S.size() == 1) 
+ ​            return S; 
+ ​        int start = 0; 
+ ​        int end = S.size()-1; 
+ ​        while(start < end) 
+ ​        { 
+ ​            while(start<end && !isLetter(S[start])) 
+ ​                start++; 
+ ​            while(end>start && !isLetter(S[end])) 
+ ​                end--; 
+ ​            std::swap(S[start], S[end]);        
+ ​            start++; 
+ ​            end--;  
+ ​        } 
+ ​        return S; 
+ ​    } 
+ ​}; 
+  
+ ​4、字符串中的第一个唯一字符 https://leetcode-cn.com/problems/first-unique-character-in-a-string/ 
+ ​[暴力法] 
+ ​class Solution { 
+ ​public: 
+ ​    int firstUniqChar(string s)  
+ ​    { 
+ ​        int j; 
+ ​        for(int i=0; i<s.size(); ++i) 
+ ​        { 
+ ​            for(j=0; j<s.size();++j) 
+ ​            { 
+ ​                if(i == j) 
+ ​                    continue; 
+ ​                if(s[j] == s[i]) 
+ ​                    break; 
+ ​            } 
+ ​            if(j == s.size()) 
+ ​                return i; 
+ ​        } 
+ ​        return -1; 
+ ​    } 
+ ​     
+ ​}; 
+  
+ ​[hash] 
+ ​class Solution { 
+ ​public: 
+ ​    int firstUniqChar(string s)  
+ ​    { 
+ ​        int hash[256] = {0}; 
+ ​        for(int i=0; i<s.size(); ++i) 
+ ​        { 
+ ​            hash[s[i]]++; 
+ ​        } 
+  
+ ​         for(int i=0; i<s.size(); ++i) 
+ ​         { 
+ ​             if(hash[s[i]] == 1) 
+ ​                return i; 
+ ​         } 
+ ​         return -1; 
+ ​    } 
+ ​}; 
+  
+ ​class Solution { 
+ ​public: 
+ ​    int firstUniqChar(string s)  
+ ​    { 
+ ​        for(int i=0; i<s.size(); ++i) 
+ ​        { 
+ ​            int index = s.find(s[i]); 
+ ​            int r_index = s.rfind(s[i]); 
+ ​            if(index == r_index) 
+ ​                return i; 
+ ​        } 
+ ​        return -1; 
+ ​    } 
+ ​}; 
+  
+  
+ ​5、字符串里面最后一个单词的长度 https://www.nowcoder.com/practice/8c949ea5f36f422594b306a2300315da?tpId=37&tqId=21224&rp=5&ru=%2Factivity%2Foj&qru=%2Fta%2Fhuawei%2Fquestion-ranking&tab=answerKey 
+ ​#include<iostream> 
+ ​#include<string> 
+ ​using namespace std; 
+  
+ ​int GetLengthLastWord(string &str) 
+ ​{ 
+ ​    int pos = str.rfind(' '); 
+ ​    if(pos == string::npos) 
+ ​        return str.size(); 
+ ​    return str.size()-pos-1; 
+ ​} 
+  
+ ​int main() 
+ ​{ 
+ ​    string str; 
+ ​    while(getline(cin, str)) 
+ ​    { 
+ ​        int len = GetLengthLastWord(str); 
+ ​        cout<<len; 
+ ​    } 
+ ​    return 0; 
+ ​} 
+  
+  
+ ​课后作业4、字符串相乘 https://leetcode-cn.com/problems/multiply-strings/submissions/ 
+ ​class Solution { 
+ ​public: 
+  
+ ​    void MulItem(string num, int s,  string &tmp) 
+ ​    { 
+ ​        int res, sign = 0; 
+  
+ ​        for(int i=0; i<num.size(); ++i) 
+ ​        { 
+ ​            res = s * (num[i]-'0') + sign; 
+ ​            if(res >= 10) 
+ ​            {  
+ ​                sign = res / 10; 
+ ​                res = res % 10; 
+ ​            } 
+ ​            else 
+ ​                sign = 0; 
+ ​            tmp += (res+'0'); 
+ ​        } 
+ ​        if(sign > 0) 
+ ​                    tmp += (sign+'0'); 
+ ​    } 
+  
+ ​    int AddItem(int a, int b, int &sign) 
+ ​    { 
+ ​        int sum = a + b + sign; 
+ ​        if(sum >= 10) 
+ ​        { 
+ ​            sum -= 10; 
+ ​            sign = 1; 
+ ​        } 
+ ​        else 
+ ​            sign = 0; 
+ ​        return sum; 
+ ​    } 
+ ​    void AddMove(string &num, string tmp, int k) 
+ ​    { 
+ ​        int i=k; 
+ ​        int j = 0; 
+ ​        int sign = 0; 
+ ​        while(i<num.size() && j<tmp.size()) 
+ ​        { 
+ ​            num[i] = AddItem(num[i]-'0', tmp[j]-'0', sign) + '0'; 
+ ​            i++; 
+ ​            j++; 
+ ​        }         
+ ​        while(i<num.size()) 
+ ​        { 
+ ​            num[i] = AddItem(num[i]-'0', 0, sign) + '0'; 
+ ​            i++; 
+ ​        }   
+ ​        while(j<tmp.size()) 
+ ​        { 
+ ​            int sum = AddItem(0, tmp[j]-'0', sign); 
+ ​            num += (sum+'0'); 
+ ​            j++; 
+ ​        }   
+ ​        if(sign > 0) 
+ ​            num += (sign+'0'); 
+ ​    } 
+ ​    string multiply(string num1, string num2)  
+ ​    { 
+ ​        reverse(num1.begin(), num1.end()); 
+ ​        reverse(num2.begin(), num2.end()); 
+  
+ ​        string result, tmp; 
+ ​        for(int i=0; i<num2.size(); ++i) 
+ ​        { 
+ ​            MulItem(num1, num2[i]-'0', tmp); 
+ ​            AddMove(result, tmp, i); 
+ ​            tmp.clear(); 
+ ​        } 
+ ​        while(result.size()>1 && result.back() == '0') 
+ ​                    result.pop_back(); 
+ ​        reverse(result.begin(), result.end()); 
+ ​        return result; 
+ ​    } 
+ ​}; 
+  
+ ​课后练习 
+ ​1、反转字符串 II https://leetcode-cn.com/problems/reverse-string-ii/ 
+ ​class Solution { 
+ ​public: 
+ ​    void Reverse(string &s, int start, int end) 
+ ​    { 
+ ​        int i = start; 
+ ​        int j = end-1; 
+ ​        while(i < j) 
+ ​        { 
+ ​            char tmp = s[i]; 
+ ​            s[i] = s[j]; 
+ ​            s[j] = tmp; 
+  
+ ​            i++; 
+ ​            j--; 
+ ​        }         
+ ​    } 
+ ​    string reverseStr(string s, int k)  
+ ​    { 
+ ​   
+ ​        int len = s.size(); 
+  
+ ​        for(int i=0; i<len; i+=2*k) 
+ ​        { 
+ ​            if(i+k < len) 
+ ​                Reverse(s, i, i+k); 
+ ​            else 
+ ​                Reverse(s, i, len); 
+ ​        } 
+ ​        return s; 
+ ​    } 
+ ​}; 
+  
+ ​2、反转字符串中的单词 III https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/ 
+ ​class Solution { 
+ ​public: 
+ ​        void Reverse(string &s, int start, int end) 
+ ​        { 
+ ​            int i = start; 
+ ​            int j = end-1; 
+ ​            while(i < j) 
+ ​            { 
+ ​                char tmp = s[i]; 
+ ​                s[i] = s[j]; 
+ ​                s[j] = tmp; 
+  
+ ​                i++; 
+ ​                j--; 
+ ​        }         
+ ​    } 
+ ​    string reverseWords(string s)  
+ ​    { 
+ ​        int start = 0; 
+ ​        int end = s.find(' '); 
+ ​        while(end != string::npos) 
+ ​        { 
+ ​            Reverse(s, start, end); 
+ ​            start = end+1; 
+ ​            end = s.find(' ', start); 
+ ​        } 
+ ​        Reverse(s, start, s.size()); 
+ ​        return s; 
+ ​    } 
+ ​}; 
+  
+  
+ ​4、找出字符串中第一个只出现一次的字符 https://www.nowcoder.com/practice/e896d0f82f1246a3aa7b232ce38029d4?tpId=37&tqId=21282&rp=1&ru=%2Factivity%2Foj&qru=%2Fta%2Fhuawei%2Fquestion-ranking&tab=answerKey 
+ ​#include<iostream> 
+ ​#include<string> 
+ ​using namespace std; 
+  
+ ​//1 
+ ​int FindFristOnly(string &str) 
+ ​{ 
+ ​    for(int i=0; i<str.size(); ++i) 
+ ​    { 
+ ​        int index = str.find(str[i]); 
+ ​        int r_index = str.rfind(str[i]); 
+ ​        if(index == r_index) 
+ ​            return str[index]; 
+ ​    } 
+ ​    return -1; 
+ ​} 
+  
+ ​//2 
+ ​int FindFristOnly(string &str) 
+ ​{ 
+ ​    int hash[256] = {0}; 
+ ​    for(int i=0; i<str.size(); ++i) 
+ ​        hash[str[i]]++; 
+ ​    for(int i=0; i<str.size(); ++i) 
+ ​    { 
+ ​        if(hash[str[i]] == 1) 
+ ​            return str[i]; 
+ ​    } 
+ ​    return -1; 
+ ​} 
+  
+ ​int main() 
+ ​{ 
+ ​    string str; 
+ ​    while(getline(cin, str)) 
+ ​    { 
+ ​        int res = FindFristOnly(str); 
+ ​        if(res != -1) 
+ ​            cout<<(char)res<<endl; 
+ ​        else 
+ ​            cout<<-1; 
+ ​    } 
+ ​    return 0; 
+ ​} 
+  
+  
+ ​Lesson9 vector 
+ ​1、只出现一次的数字 https://leetcode-cn.com/problems/single-number/ 
+ ​class Solution { 
+ ​public: 
+ ​    // 1 3 5 7 9 9 7 5 3 1 2 
+ ​    int singleNumber(vector<int>& nums)  
+ ​    { 
+ ​        int result = 0; 
+ ​        for(int i=0; i<nums.size(); ++i) 
+ ​            result ^= nums[i]; 
+ ​        return result; 
+ ​    } 
+ ​}; 
+  
+ ​2、杨辉三角 https://leetcode-cn.com/problems/pascals-triangle/submissions/ 
+ ​class Solution { 
+ ​public: 
+ ​    vector<vector<int>> generate(int numRows)  
+ ​    { 
+ ​        //resize()  reserve() 
+ ​        vector<vector<int>> vv; 
+ ​        vv.resize(numRows); 
+  
+ ​        for(int i=0; i<numRows; ++i) 
+ ​        { 
+ ​            vv[i].resize(i+1); 
+ ​            vv[i][0] = vv[i][i] = 1; 
+ ​        } 
+  
+ ​        for(int i=2; i<vv.size(); ++i) 
+ ​        { 
+ ​            for(int j=1; j<vv[i].size()-1; ++j) 
+ ​                vv[i][j] = vv[i-1][j-1] + vv[i-1][j];           
+ ​        } 
+  
+ ​        return vv; 
+ ​    } 
+ ​}; 
+  
+ ​3、删除有序数组中的重复项 https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ 
+ ​//1 使用迭代器 
+ ​class Solution { 
+ ​public: 
+ ​    int removeDuplicates(vector<int>& nums)  
+ ​    { 
+ ​        if(nums.size() <= 1) 
+ ​            return nums.size(); 
+ ​             
+ ​        auto s = nums.begin(); 
+ ​        auto e = s+1; 
+ ​        while(s != nums.end()) 
+ ​        { 
+ ​            while(e!=nums.end() && *e==*s) 
+ ​                ++e; 
+ ​            s++; 
+ ​            s = nums.erase(s, e); 
+ ​            e = s+1; 
+ ​        } 
+ ​        return nums.size(); 
+ ​    } 
+ ​}; 
+ ​//2 使用容器 list unique 
+ ​class Solution { 
+ ​public: 
+ ​    int removeDuplicates(vector<int>& nums)  
+ ​    { 
+ ​        if(nums.size() <= 1) 
+ ​            return nums.size(); 
+  
+ ​       list<int> lt(nums.begin(), nums.end()); 
+ ​       lt.unique(); 
+ ​       nums = vector<int>(lt.begin(), lt.end()); 
+ ​       return nums.size(); 
+ ​    } 
+ ​}; 
+  
+ ​4、只出现一次的数字 II https://leetcode-cn.com/problems/single-number-ii/ 
+ ​//暴力法 
+ ​class Solution { 
+ ​public: 
+ ​    int singleNumber(vector<int>& nums)  
+ ​    { 
+ ​        int map[10000][2] = {0}; 
+ ​        int k = 0; //代表数字的个数 
+  
+ ​        int j; 
+ ​        for(int i=0; i<nums.size(); ++i) 
+ ​        { 
+ ​            for(j=0; j<k; ++j) 
+ ​            { 
+ ​                if(map[j][0] == nums[i]) 
+ ​                { 
+ ​                    map[j][1]++; 
+ ​                    break; 
+ ​                } 
+ ​            } 
+ ​            if(j == k) 
+ ​            { 
+ ​                map[k][0] = nums[i]; 
+ ​                map[k][1] = 1; 
+ ​                k++; 
+ ​            } 
+ ​        } 
+  
+ ​        int result; 
+ ​        for(int i=0; i<k; ++i) 
+ ​        { 
+ ​            if(map[i][1] == 1) 
+ ​                result = map[i][0]; 
+ ​        } 
+ ​        return result; 
+ ​    } 
+ ​}; 
+ ​//位运算法 
+ ​class Solution { 
+ ​public: 
+ ​    int singleNumber(vector<int>& nums)  
+ ​    { 
+ ​        int result = 0; 
+ ​        for(int i=0; i<32; ++i) 
+ ​        { 
+ ​            int mask = 1<<i;  //00 00 00 01 
+ ​            int count = 0; 
+ ​            for(int j=0; j<nums.size(); ++j) 
+ ​            { 
+ ​                if((nums[j] & mask) != 0) 
+ ​                    count++; 
+ ​            } 
+  
+ ​            if((count % 3) != 0) 
+ ​                result = result | mask; 
+ ​        } 
+ ​        return result; 
+ ​    } 
+ ​}; 
+  
+ ​5、 只出现一次的数字 III https://leetcode-cn.com/problems/single-number-iii/ 
+ ​class Solution { 
+ ​public: 
+ ​    vector<int> singleNumber(vector<int>& nums)  
+ ​    { 
+ ​        int result = 0; 
+ ​        for(int i=0; i<nums.size(); ++i) 
+ ​            result ^= nums[i]; 
+ ​         
+ ​        int mask = 1; 
+ ​        while((mask & result) == 0) 
+ ​            mask <<= 1; 
+  
+ ​        vector<int> res(2); 
+ ​        for(int i=0; i<nums.size(); ++i) 
+ ​        { 
+ ​            if((nums[i] & mask) == 0) 
+ ​                res[0] ^= nums[i]; 
+ ​            else 
+ ​                res[1] ^= nums[i]; 
+ ​        } 
+ ​        return res; 
+ ​    } 
+ ​}; 
+  
+ ​6、数组中出现次数超过一半的数字 OJ https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163?tpId=13&tqId=11181&rp=1&ru=%2Factivity%2Foj&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking&tab=answerKey 
+ ​//暴力法 
+ ​class Solution { 
+ ​public: 
+ ​    int MoreThanHalfNum_Solution(vector<int> numbers)  
+ ​    { 
+ ​         
+ ​        int map[10000][2] = {0}; 
+ ​        int k = 0; //代表数字的个数 
+  
+ ​        int j; 
+ ​        for(int i=0; i<numbers.size(); ++i) 
+ ​        { 
+ ​            for(j=0; j<k; ++j) 
+ ​            { 
+ ​                if(map[j][0] == numbers[i]) 
+ ​                { 
+ ​                    map[j][1]++; 
+ ​                    break; 
+ ​                } 
+ ​            } 
+ ​            if(j == k) 
+ ​            { 
+ ​                map[k][0] = numbers[i]; 
+ ​                map[k][1] = 1; 
+ ​                k++; 
+ ​            } 
+ ​        } 
+ ​         
+ ​        int len = numbers.size(); 
+ ​        for(int i=0; i<k; ++i) 
+ ​        { 
+ ​            if(map[i][1] > len/2) 
+ ​                return map[i][0]; 
+ ​        } 
+ ​        return 0; 
+ ​    } 
+ ​}; 
+  
+ ​//利用排序 
+ ​class Solution { 
+ ​public: 
+ ​    int MoreThanHalfNum_Solution(vector<int> numbers)  
+ ​    { 
+ ​        sort(numbers.begin(), numbers.end());  
+ ​        int len = numbers.size(); 
+ ​        int mid = numbers[len / 2]; 
+ ​         
+ ​        int count = 0; 
+ ​        for(int i=0; i<numbers.size(); ++i) 
+ ​        { 
+ ​            if(numbers[i] == mid) 
+ ​                count++; 
+ ​        } 
+ ​         
+ ​        return count > len/2 ? mid : 0; 
+ ​    } 
+ ​}; 
+  
+ ​7、电话号码组合 -暂时不讲 
+  
+ ​8、连续子数组的最大和 OJ https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&rp=1&ru=%2Factivity%2Foj&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking&tPage=2&tab=answerKey 
+ ​class Solution { 
+ ​public: 
+ ​    int FindGreatestSumOfSubArray(vector<int> array)  
+ ​    { 
+ ​        int cursum = array[0]; 
+ ​        int maxsum = array[0]; 
+ ​        for(int i=1; i<array.size(); ++i) 
+ ​        { 
+ ​            cursum += array[i]; 
+ ​            if(cursum < array[i]) 
+ ​                cursum = array[i]; 
+ ​            if(cursum > maxsum) 
+ ​                maxsum = cursum; 
+ ​        } 
+ ​        return maxsum; 
+ ​    }
