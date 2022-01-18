@@ -1,0 +1,79 @@
+### Hi there 👋
+
+<!--
+**Nate158eTh/Nate158eTh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+Here are some ideas to get you started:
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+ข้ามไปที่เนื้อหา
+เน็ต158eTh
+/
+วัชรินทร์เนท
+เทมเพลตสาธารณะ
+แยกจาก0634034090Nate/watcharinNate
+รหัส
+ดึงคำขอ
+1
+การกระทำ
+โครงการ
+Wiki
+ความปลอดภัย
+ข้อมูลเชิงลึก
+การตั้งค่า
+เนท158
+CI #2
+สร้าง
+ที่ประสบความสำเร็จ 3 นาทีที่ผ่านมา ใน 4 วินาที
+3s
+เวอร์ชันนักวิ่งปัจจุบัน: '2.285.1'
+ระบบปฏิบัติการ
+สภาพแวดล้อมเสมือนจริง
+ผู้จัดเตรียมสภาพแวดล้อมเสมือน
+GITHUB_TOKEN สิทธิ์
+แหล่งข่าวลับ: Actions
+เตรียมไดเรกทอรีเวิร์กโฟลว์
+เตรียมการดำเนินการที่จำเป็นทั้งหมด
+กำลังรับข้อมูลการดาวน์โหลดการดำเนินการ
+ดาวน์โหลดที่เก็บการดำเนินการ 'actions/checkout@v2' (SHA:ec3a7ce113134d7a93b817d10a8272cb61118579)
+1s
+Run actions/checkout@v2
+Syncing repository: Nate158eTh/watcharinNate
+Getting Git version info
+Deleting the contents of '/home/runner/work/watcharinNate/watcharinNate'
+Initializing the repository
+Disabling automatic garbage collection
+Setting up auth
+Fetching the repository
+Determining the checkout info
+Checking out the ref
+/usr/bin/git log -1 --format='%H'
+'cf0e071151b7493338333417d86a909a645a7b98'
+0s
+Run echo Hello, world!
+Hello, world!
+0s
+Run echo Add other actions to build,
+Add other actions to build,
+test, and deploy your project.
+0s
+Post job cleanup.
+/usr/bin/git version
+git version 2.34.1
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+0s
+Cleaning up orphan processes
+
+-->
